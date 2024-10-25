@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account</title>
+    <link rel="stylesheet" href="project.css"> 
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="container">
+        <h1>Delete Account</h1>
+        <p>Are you sure you want to delete your account? This action cannot be undone.</p>
+        <button id="confirmDeleteBtn">Yes, Delete My Account</button>
+        <button onclick="window.location.href='my_info.html'">Cancel</button>
+    </div>
+
+    <script>
+        document.getElementById("confirmDeleteBtn").addEventListener("click", function() {
+            // Remove user data from local storage
+            localStorage.removeItem("userName");
+
+            // Redirect to the welcome page 
+            window.location.href = "welcome.html";
+        });
+    </script>
+</body>
+</html>
